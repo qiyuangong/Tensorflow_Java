@@ -2,19 +2,22 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.myorg</groupId>
   <artifactId>test-tensorflow</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <properties>
-    <exec.mainClass>HelloTensorFlow</exec.mainClass>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
-  </properties>
-  <dependencies>
-    <dependency>
-      <groupId>org.tensorflow</groupId>
-      <artifactId>tensorflow</artifactId>
-      <version>1.13.1</version>
-    </dependency>
-  </dependencies>
+  <version>1.1-SNAPSHOT</version>
+      <properties>
+        <exec.mainClass>HelloTensorFlow</exec.mainClass>
+        <!-- Minimal version for compiling TensorFlow Java is JDK 8 -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- Include TensorFlow (pure CPU only) for all supported platforms -->
+        <dependency>
+            <groupId>org.tensorflow</groupId>
+            <artifactId>tensorflow-core-platform</artifactId>
+            <version>0.3.1</version>
+        </dependency>
+    </dependencies>
   <build>
         <plugins>
             <plugin>

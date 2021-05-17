@@ -1,5 +1,19 @@
-# Tensorflow_Java
+# Tensorflow_Java 1.1 Test Code
 
-Tesorflow Java API Test. Based on [TensorFlow for Java](https://www.tensorflow.org/install/lang_java).
+Tesorflow 2.0 Java API Test
 
-Due to JNI bugs in TensorFlow 1.15.0, these code won't work on TensorFlow 1.15.0.
+Directly run
+
+```
+mvn -q compile exec:java
+```
+
+Package and run with Java
+
+```
+mvn clean package -DskipTests
+java -cp target/test-tensorflow-1.1-SNAPSHOT-jar-with-dependencies.jar HelloTensorFlow
+```
+
+Based on [TensorFlow for Java](https://www.tensorflow.org/jvm/install).
+
